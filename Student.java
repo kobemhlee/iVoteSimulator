@@ -14,9 +14,10 @@ public class Student {
 		return score;
 	}
 
+	// use of addScore() rather than setScore() 
 	public void addScore() {
 		score++;
-	}
+	} 
 
 	public String getId() {
 		return id;

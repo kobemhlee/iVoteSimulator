@@ -3,31 +3,12 @@ import java.lang.Math;
 
 public class VotingService {
 
-	public void initiateQuiz() {
-		// Generate 10 students 
-		Student john = new Student("John");
-		System.out.println(john);
-		Student rob = new Student("Rob");
-		System.out.println(rob);
-		Student jessie = new Student("Jessie");
-		System.out.println(jessie);
-		Student danny = new Student("Danny");
-		System.out.println(danny);
-		Student roger = new Student("Roger");
-		System.out.println(roger);
-		Student annie = new Student("Annie");
-		System.out.println(annie);
-		Student abby = new Student("Abby");
-		System.out.println(abby);
-		Student duke = new Student("Duke");
-		System.out.println(duke);
-		Student jed = new Student("Jed");
-		System.out.println(jed);
-		Student anna = new Student("Anna");
-		System.out.println(anna);
-		Student[] students = new Student[]{john, rob, jessie, danny, roger, annie, abby, duke, jed, anna};
+	public void initiateQuiz(Student[] students) {
 		
-		int rand;
+		int rand = (int)(Math.random()*3) + 7;
+		for (int r = 0; r < rand; r++) {
+			System.out.println(students[9-r]);
+		}
 		
 		// Generate 5 random questions from list (with associated answers)
 		SingleChoice sc = new SingleChoice();
@@ -58,6 +39,7 @@ public class VotingService {
 		int bCounter;
 		int cCounter;
 		int dCounter;
+		// Counter variables to keep track of letter choices
 		
 		
 		for (int i = 0; i<5;i++) {	
@@ -112,6 +94,7 @@ public class VotingService {
 				dCounter *= 2;
 				
 				int switcher = 0;
+				// Switcher determines whether the first correct answer has already been printed
 				
 				int mcQuestionsIndex = 0;
 				// find the corresponding index in the mc questions array for the random question at hand
@@ -184,6 +167,7 @@ public class VotingService {
 			}
 		}
 		
+		// Obtain best student and best student's score (out of 50)
 		int indexBestStudent = 0;
 		int bestStudentVal = 0;
 		for (int s = 0; s<10; s++) {
