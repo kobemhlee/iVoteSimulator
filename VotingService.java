@@ -195,6 +195,6 @@ public class VotingService {
 		
 		// Print out student with best score out of maximum score
 		System.out.println("\nBest performing student: " + students[indexBestStudent]);
-		System.out.println("Score: " + students[indexBestStudent].getScore()*10 + "/" + sc.QUIZ_SCORE);
+		System.out.println("Score: " + students[indexBestStudent].getScore()*10 + "/" + Question.QUIZ_SCORE);
 	}
 }
